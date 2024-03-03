@@ -54,14 +54,12 @@
     greeting: greeting {
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
-      label = "greeting";
       bindings = <&kp H &kp E &kp L &kp L &kp O>;
     };
 
     rgblayer: rgb_layer {
       compatible = "zmk,behavior-macro-two-param";
       #binding-cells = <2>;
-      label = "MOMENTARY_LAYER_WITH_RGB_COLOR";
       bindings
         = <&macro_param_2to2 &rgb_ug RGB_COLOR_HSB_CMD MACRO_PLACEHOLDER &macro_param_1to1>
         , <&macro_press>
@@ -77,7 +75,6 @@
     shift: with_lshift {
       compatible = "zmk,behavior-macro-one-param";
       #binding-cells = <1>;
-      label = "KEY_PRESS_WITH_LEFT_SHIFT_MODIFIER";
       bindings
         = <&macro_press>
         , <&kp LSHFT>
@@ -91,7 +88,6 @@
     as: autoshift {
       compatible = "zmk,behavior-macro-one-param";
       #binding-cells = <1>;
-      label = "AUTOSHIFT_KEYPRESS";
       bindings
         = <&macro_press>
         , <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>
@@ -106,7 +102,6 @@
     as_ht: autoshift_hold_tap {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      label = "AUTOSHIFT_HOLD_TAP";
       bindings = <&shift>, <&kp>;
 
       tapping-term-ms = <190>;
@@ -115,7 +110,6 @@
     hml: homewrow_mods_left {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      label = "HOMEROW_MODS_LEFT_HAND";
       bindings = <&kp>, <&kp>;
 
       tapping-term-ms = <200>;
@@ -125,7 +119,6 @@
     hmr: homewrow_mods_right {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      label = "HOMEROW_MODS_RIGHT_HAND";
       bindings = <&kp>, <&kp>;
 
       tapping-term-ms = <200>;
@@ -134,7 +127,6 @@
 
     capdance: capdance {
       compatible = "zmk,behavior-tap-dance";
-      label = "CAPDANCE";
       #binding-cells = <0>;
       bindings = <&caps_word>, <&kp CAPS>;
     };
@@ -188,16 +180,16 @@
         &kp C_POWER           &kp C_SLEEP_MODE    &as E             &none              &none     &none   &none   &kp K_LOCK  &sys_reset  &bootloader
         &kp C_BRIGHTNESS_INC  &kp C_FAST_FORWARD  &kp K_PLAY_PAUSE  &kp C_VOLUME_UP    &none     &none   &none   &none       &none       &none
         &kp C_BRIGHTNESS_DEC  &kp C_REWIND        &kp K_MUTE        &kp C_VOLUME_DOWN  &none     &none   &none   &none       &none       &none
-                                                  &trans            &trans             &trans    &trans  &trans  &trans
+                                                  &lt 5 ESC         &trans             &trans    &trans  &trans  &trans
       >;
     };
 
     mouse {
       bindings = <
-        &none     &none      &none      &none     &none     &none   &none   &none   &none  &none
-        &kp LALT  &kp LSHFT  &kp LCTRL  &kp LGUI  &none     &none   &none   &none   &none  &none
-        &none     &none      &none      &none     &none     &none   &none   &none   &none  &none
-                             &trans     &trans    &trans    &trans  &trans  &trans
+        &none     &none      &none      &none     &none     &none      &none      &none     &none  &none
+        &kp LALT  &kp LSHFT  &kp LCTRL  &kp LGUI  &none     &none      &none      &none     &none  &none
+        &none     &none      &none      &none     &none     &none      &none      &none     &none  &none
+                             &trans     &trans    &trans    &mkp LCLK  &mkp RCLK  &mkp MCLK
       >;
     };
   };

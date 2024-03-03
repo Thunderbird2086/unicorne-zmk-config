@@ -1,7 +1,7 @@
 if SHIELD_UNICORNE_3X5_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "uniCorne 3X5"
+    default "uniCorne 3x5"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
