@@ -1,0 +1,5 @@
+config SHIELD_UNICORNE_3X6_LEFT
+    def_bool $(shields_list_contains,unicorne_3x6_left)
+
+config SHIELD_UNICORNE_3X6_RIGHT
+    def_bool $(shields_list_contains,unicorne_3x6_right)

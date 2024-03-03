@@ -1,14 +1,14 @@
-if SHIELD_UNICORNE_3X5_LEFT
+if SHIELD_UNICORNE_3X6_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "uniCorne 3x5"
+    default "uniCorne 3x6"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_UNICORNE_3X5_LEFT || SHIELD_UNICORNE_3X5_RIGHT
+if SHIELD_UNICORNE_3X6_LEFT || SHIELD_UNICORNE_3X6_RIGHT
 
 config ZMK_SPLIT
     default y
