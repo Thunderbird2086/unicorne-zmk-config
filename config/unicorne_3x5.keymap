@@ -10,6 +10,11 @@
   /delete-property/ ignore-modifiers;
 };
 
+nice_view_spi: &spi0 {
+    cs-gpios = <&pro_micro 9 GPIO_ACTIVE_HIGH>;
+};
+
+
 / {
   combos {
     compatible = "zmk,combos";
@@ -140,6 +145,7 @@
     compatible = "zmk,keymap";
 
     base {
+      display-name = "Colemak-DH";
       bindings = <
         &kp Q        &kp W          &kp F         &kp P        &kp B          &kp J      &kp L            &kp U         &kp Y          &kp SQT
         &hml LALT A  &hml LSHIFT R  &hml LCTRL S  &hml LCMD T  &kp G          &kp M      &hmr RCMD N      &hmr RCTRL E  &hmr RSHIFT I  &hmr RALT O
@@ -149,6 +155,7 @@
     };
 
     code {
+      display-name = "Code";
       bindings = <
         &kp N1           &kp N2     &kp N3     &kp N4    &kp N5      &kp N6  &kp N7    &kp N8                &kp N9              &kp N0
         &hml LALT GRAVE  &kp LSHFT  &kp LCTRL  &kp LCMD  &none       &none   &kp RCMD  &hmr RCTRL SEMICOLON  &hmr RSHFT MINUS    &hmr RALT EQUAL
@@ -158,6 +165,7 @@
     };
 
     function {
+      display-name = "Function";
       bindings = <
         &kp F1    &kp F2     &kp F3     &kp F4    &kp F5     &kp F6   &kp F7    &kp F8     &kp F9     &kp F10
         &kp LALT  &kp LSHFT  &kp LCTRL  &kp LGUI  &kp F12    &kp F11  &kp RGUI  &kp RCTRL  &kp RSHFT  &kp RALT
@@ -167,6 +175,7 @@
     };
 
     nav {
+      display-name = "Navigation";
       bindings = <
         &none     &none      &none      &none     &none     &none    &none     &none     &none      &none
         &kp LALT  &kp LSHFT  &kp LCTRL  &kp LGUI  &none     &kp INS  &kp LEFT  &kp UP    &kp RIGHT  &kp PAGE_UP
@@ -176,20 +185,12 @@
     };
 
     media {
+      display-name = "Media";
       bindings = <
         &kp C_POWER           &kp C_SLEEP_MODE    &as E             &none              &none     &none   &none   &kp K_LOCK  &sys_reset  &bootloader
         &kp C_BRIGHTNESS_INC  &kp C_FAST_FORWARD  &kp K_PLAY_PAUSE  &kp C_VOLUME_UP    &none     &none   &none   &none       &none       &none
         &kp C_BRIGHTNESS_DEC  &kp C_REWIND        &kp K_MUTE        &kp C_VOLUME_DOWN  &none     &none   &none   &none       &none       &none
                                                   &lt 5 ESC         &trans             &trans    &trans  &trans  &trans
-      >;
-    };
-
-    mouse {
-      bindings = <
-        &none     &none      &none      &none     &none     &none      &none      &none     &none  &none
-        &kp LALT  &kp LSHFT  &kp LCTRL  &kp LGUI  &none     &none      &none      &none     &none  &none
-        &none     &none      &none      &none     &none     &none      &none      &none     &none  &none
-                             &trans     &trans    &trans    &mkp LCLK  &mkp RCLK  &mkp MCLK
       >;
     };
   };
