@@ -1,0 +1,21 @@
+# Copyright (c) 2023 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_UNICORNE
+    bool
+
+config SHIELD_UNICORNE_3X5_LEFT
+    def_bool $(shields_list_contains,unicorne_3x5_left)
+    select SHIELD_UNICORNE
+
+config SHIELD_UNICORNE_3X5_RIGHT
+    def_bool $(shields_list_contains,unicorne_3x5_right)
+    select SHIELD_UNICORNE
+
+config SHIELD_UNICORNE_3X6_LEFT
+    def_bool $(shields_list_contains,unicorne_3x6_left)
+    select SHIELD_UNICORNE
+
+config SHIELD_UNICORNE_3X6_RIGHT
+    def_bool $(shields_list_contains,unicorne_3x6_right)
+    select SHIELD_UNICORNE
