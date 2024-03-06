@@ -1,3 +1,6 @@
-# unicorne-zmk-config
-unicorne 3x5 zmk 
-unicorne 3x6 zmk 
+# uniCorne zmk
+
+## Keyboards
+* [uniCorne](https://github.com/Thunderbird2086/uniCorne)
+  * 3x5
+  * 3x6

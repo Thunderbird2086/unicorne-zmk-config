@@ -1,0 +1,15 @@
+file_format: "1"
+id: unicorne
+name: uniCorne
+type: shield
+url: https://github.com/Thunderbird2086/uniCorne
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+siblings:
+  - unicorne_3x5_left
+  - unicorne_3x5_right
+  - unicorne_3x6_left
+  - unicorne_3x6_right
