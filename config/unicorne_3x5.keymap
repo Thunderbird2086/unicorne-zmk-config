@@ -74,11 +74,11 @@ nice_view_spi: &spi0 {
     media_layer {
       display-name = "Media";
       bindings = <
-        // col 0       // col 1          // col 2    // col 3      // col 4    // col 5  // col 6  // col 7    // col 8    // col 9
-        &kp C_POWER    &kp C_SLEEP_MODE  &none       &none         &none       &none     &none     &kp K_LOCK  &sys_reset  &bootloader
-        &kp C_BRI_INC  &kp C_NEXT        &kp C_PP    &kp C_VOL_UP  &none       &none     &none     &none       &none       &none
-        &kp C_BRI_DEC  &kp C_PREVIOUS    &kp C_MUTE  &kp C_VOL_DN  &none       &none     &none     &none       &none       &none
-                                         &lt 5 ESC  &trans        &trans      &trans    &trans    &trans
+        // col 0       // col 1          // col 2    // col 3      // col 4    // col 5  // col 6  // col 7         // col 8    // col 9
+        &kp C_POWER    &kp C_SLEEP_MODE  &none       &none         &none       &none     &none     &kp C_AL_COFFEE  &none       &none
+        &kp C_BRI_INC  &kp C_NEXT        &kp C_PP    &kp C_VOL_UP  &none       &none     &none     &none            &none       &none
+        &kp C_BRI_DEC  &kp C_PREVIOUS    &kp C_MUTE  &kp C_VOL_DN  &none       &none     &none     &none            &none       &none
+                                         &lt 5 ESC   &trans        &trans      &trans    &trans    &trans
       >;
     };
 
