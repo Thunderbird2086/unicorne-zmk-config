@@ -10,16 +10,13 @@ nice_view_spi: &spi0 {
     cs-gpios = <&pro_micro 10 GPIO_ACTIVE_HIGH>;
 };
 
-&lt {
-  flavor = "hold-preferred";
-};
 
 / {
   behaviors {
     hm: homewrow_mods {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      flavor = "hold-preferred";
+      flavor = "tap-preferred";
       tapping-term-ms = <200>;
       quick-tap-ms = <0>;
       bindings = <&kp>, <&kp>;
